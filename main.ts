@@ -29,7 +29,6 @@ function Ausgangsposition () {
 }
 function motion1 () {
     Position2 = ServoSlow.setServoAngle(2, 70, 10, Position2, ServoSlow.ServoDirection.CW)
-    Position2 = ServoSlow.setServoAngle(2, 70, 10, Position2, ServoSlow.ServoDirection.CW)
     basic.pause(500)
     Position2 = ServoSlow.setServoAngle(2, 140, 10, Position2, ServoSlow.ServoDirection.CCW)
     basic.pause(500)
