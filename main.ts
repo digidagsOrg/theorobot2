@@ -11,12 +11,7 @@ input.onButtonPressed(Button.A, function () {
     motion1()
 })
 function motion2 () {
-    position1 = ServoSlow.setServoAngle(1, 20, 10, position1, ServoSlow.ServoDirection.CW)
-    basic.pause(500)
-    position1 = ServoSlow.setServoAngle(1, 40, 10, position1, ServoSlow.ServoDirection.CCW)
-    basic.pause(500)
-    position1 = ServoSlow.setServoAngle(1, 20, 10, position1, ServoSlow.ServoDirection.CW)
-    kitronik_simple_servo.servoStop(kitronik_simple_servo.ServoChoice.servo1)
+	
 }
 input.onButtonPressed(Button.AB, function () {
     Ausgangsposition()
@@ -38,11 +33,14 @@ function motion1 () {
     Position2 = ServoSlow.setServoAngle(2, 140, 10, Position2, ServoSlow.ServoDirection.CCW)
     basic.pause(500)
     Position2 = ServoSlow.setServoAngle(2, 70, 10, Position2, ServoSlow.ServoDirection.CW)
-    kitronik_simple_servo.servoStop(kitronik_simple_servo.ServoChoice.servo2)
+    basic.pause(500)
+    position1 = ServoSlow.setServoAngle(1, 20, 10, position1, ServoSlow.ServoDirection.CW)
+    basic.pause(500)
+    position1 = ServoSlow.setServoAngle(1, 40, 10, position1, ServoSlow.ServoDirection.CCW)
+    basic.pause(500)
+    position1 = ServoSlow.setServoAngle(1, 20, 10, position1, ServoSlow.ServoDirection.CW)
 }
 let Position2 = 0
 let position1 = 0
 radio.setGroup(1)
 Ausgangsposition()
-kitronik_simple_servo.servoStop(kitronik_simple_servo.ServoChoice.servo2)
-kitronik_simple_servo.servoStop(kitronik_simple_servo.ServoChoice.servo1)
